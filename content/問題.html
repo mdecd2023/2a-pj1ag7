@@ -2,7 +2,7 @@
         <head>
         <title>cmsimde_site</title>
         <meta charset="utf-8">
-<meta property="head" content="H1">
+<meta property="head" content="H2">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
@@ -141,8 +141,63 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">About << <a href='About.html'>Previous</a> <a href='41023106李凱新心得.html'>Next</a> >> 41023106李凱新心得<br /><h1>W3</h1>
-<br />About << <a href='About.html'>Previous</a> <a href='41023106李凱新心得.html'>Next</a> >> 41023106李凱新心得</div>
+    <div id="tipue_search_content">tutorial1 << <a href='tutorial1.html'>Previous</a> <br /><h1>問題</h1>
+<p>使用chatgpt</p>
+<p><strong>1.<span class="ui-provider uv b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">coppeliasim中的scene與model有何不同?</span></strong></p>
+<p>Scene 代表整個模擬場景，包括模型、燈光、相機、物理引擎、碰撞檢測等元素，而且可以包含多個模型。在 CoppeliaSim 裡，你可以在 Scene 中建立不同的物體、場景、環境等元素，然後對它們進行編輯、設置、執行模擬等操作。</p>
+<p>Model 則是指單個模型或物體，可以是機器人、車輛、感測器等。每個 Model 都有自己的屬性和行為，你可以對其進行建模、編程、測試等操作。在 CoppeliaSim 裡，你可以將多個 Model 加入到 Scene 中，然後進行整體模擬。</p>
+<p>簡而言之，Scene 是整個模擬場景的容器，包含<span style="color: #3366ff;">多個 Model</span>；而 Model 是<span style="color: #3366ff;">單獨的模型或物體</span>，可以在 Scene 中被使用。</p>
+<p><strong>2.<span class="ui-provider uv b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">在CoppeliaSim scene中，何謂clean model?</span></strong></p>
+<p>在 CoppeliaSim 的 Scene 中，Clean Model 是一個特殊的 Model，它被用來將 Scene 中的所有物體和模型全部清除，從而實現一個空白的場景。</p>
+<p>當你創建一個新的 Scene 時，CoppeliaSim 會自動在 Scene 中添加一個 Clean Model，這樣你就可以通過刪除 Clean Model 來清空整個 Scene。你也可以通過右鍵單擊 Clean Model，然後選擇 Delete Object 來手動刪除它。</p>
+<p>Clean Model 本身沒有實際的物理特性，它只是作為一個空白的模型來幫助你更方便地清空整個場景，以便開始進行新的模擬和測試。</p>
+<p><strong>3.<span class="ui-provider uv b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">如何在CoppeliaSim中，利用Lua以及Python建立primitive type object，並利用程式設定物件位置?</span></strong></p>
+<div class="group w-full text-gray-800 dark:text-gray-100 border-b border-black/10 dark:border-gray-900/50 bg-gray-50 dark:bg-[#444654]">
+<div class="text-base gap-4 md:gap-6 md:max-w-2xl lg:max-w-2xl xl:max-w-3xl p-4 md:py-6 flex lg:px-0 m-auto">
+<div class="relative flex w-[calc(100%-50px)] flex-col gap-1 md:gap-3 lg:w-[calc(100%-115px)]">
+<div class="flex flex-grow flex-col gap-3">
+<div class="min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap">
+<div class="markdown prose w-full break-words dark:prose-invert light">
+<p>在 CoppeliaSim 中，你可以使用 Lua 或 Python 語言來建立 primitive type object，並利用程式設定物件位置。以下是使用 Lua 和 Python 創建 primitive type object 的基本步驟：</p>
+<p>使用 Lua 創建 primitive type object：</p>
+<ol>
+<li>打開 CoppeliaSim，點擊 File -&gt; New Scene，創建一個新的場景。</li>
+<li>在 Scene 中，點擊左側菜單的 Primitive Shapes 按鈕，選擇你想要的 primitive shape（如 Cube、Sphere、Cylinder 等）。</li>
+<li>在 Scene 中點擊滑鼠右鍵，選擇 Add -&gt; Primitive shape，你會發現一個新的 primitive object 被添加到場景中。</li>
+<li>在 Scene 中選擇這個 primitive object，點擊右側的 Property Editor 按鈕，你可以看到這個物體的所有屬性，例如位置、旋轉、大小等。</li>
+<li>在 Lua script 中，使用 simCreatePureShape 函數創建 primitive object。例如，以下代碼創建一個 0.5 米大小的立方體並將其放置在世界坐標系原點：</li>
+</ol>
+<div class="bg-black rounded-md mb-4">
+<div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>scss</span><button class="flex ml-auto gap-2"><svg class="h-4 w-4" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect height="4" rx="1" ry="1" width="8" x="8" y="2"></rect></svg>Copy code</button></div>
+<div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-scss">handle = <span class="hljs-built_in">simCreatePureShape</span>(sim_shape_cube, <span class="hljs-number">16</span>, {<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>}, <span class="hljs-number">0.01</span>) <span class="hljs-built_in">simSetObjectPosition</span>(handle, -<span class="hljs-number">1</span>, {<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>}) </code></div>
+</div>
+<p>其中 sim_shape_cube 是立方體的 ID，16 是立方體的位姿關係參數，{0.5, 0.5, 0.5} 是立方體的大小，0.01 是立方體的質量。simSetObjectPosition 函數將物體放置在世界坐標系原點。</p>
+<p>使用 Python 創建 primitive type object：</p>
+<ol>
+<ol>
+<li>在 CoppeliaSim 中，點擊 File -&gt; New Scene，創建一個新的場景。</li>
+<li>在 Scene 中，點擊左側菜單的 Primitive Shapes 按鈕，選擇你想要的 primitive shape（如 Cube、Sphere、Cylinder 等）。</li>
+<li>在 Scene 中點擊滑鼠右鍵，選擇 Add -&gt; Primitive shape，你會發現一個新的 primitive object 被添加到場景中。</li>
+<li>在 Scene 中選擇這個 primitive object，點擊右側的 Property Editor 按鈕，你可以看到這個物體的所有屬性，例如位置、旋轉、大小等。</li>
+<li>在 Python script 中，使用 sim.simxCreatePureShape 函數創建 primitive object。例如，以下代碼創建一個 0.5 米大小的立方體並將其放置在世界坐標系原。<img alt="" height="371" src="./../images/螢幕擷取畫面 2023-03-19 181928.png" width="963"/>
+<div class="flex justify-between">
+<p><strong>4.CoppeliaSim.ttt檔案格式與.simscene.xml檔案格式有何不同?</strong></p>
+<p>CoppeliaSim 的 .ttt 檔案格式和 .simscene.xml 檔案格式都是用來保存 CoppeliaSim 场景的文件格式，但是它們的文件結構和格式是不同的。</p>
+<p>.ttt 檔案是 CoppeliaSim 的二進制文件格式，可以保存整個場景，包括場景中的物體、模型、腳本、參數等。它是 CoppeliaSim 的原生文件格式，可以被 CoppeliaSim 直接讀取和寫入。因為是二進制格式，所以 .ttt 檔案比 .simscene.xml 檔案更小，而且讀取速度更快。</p>
+<p>另一方面，.simscene.xml 檔案是一個基於 XML 格式的文本文件，可以保存場景中的所有數據，但是不包括圖形資源。它是一種通用的格式，可以用於不同的應用程序和平台。因為是文本格式，所以 .simscene.xml 檔案易於讀取和編輯，但是文件大小比 .ttt 檔案要大，讀取速度也較慢。</p>
+<p>總的來說，.ttt 檔案格式和 .simscene.xml 檔案格式都可以用於保存 CoppeliaSim 场景，但是它們各有優缺點，需要根據具體情況來選擇使用哪一種格式。如果要保存的是 CoppeliaSim 场景本身，最好使用 .ttt 格式。如果要將 CoppeliaSim 场景集成到其他應用程序或系統中，最好使用 .simscene.xml 格式。</p>
+<p></p>
+<p></p>
+</div>
+</li>
+</ol>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><br />tutorial1 << <a href='tutorial1.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
