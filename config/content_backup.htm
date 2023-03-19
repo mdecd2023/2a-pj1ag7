@@ -99,7 +99,7 @@ run()
 <h3>tutorial1</h3>
 <p></p>
 <p><a href="/downloads/BubbleRub tutorial.pptx">/downloads/BubbleRub tutorial.pptx</a></p>
-<p><a href="/downloads/2.ttt">/downloads/2.ttt</a></p>
+<p></p>
 <p>李凱新:由於一開始時，不熟悉CoppeliaSimEdu的使用方法摸索了一陣子所以wink截圖的不夠完整，後來我一邊指導我的組員再做一次，同時他做了仔細版的wink。</p>
 <p>到感測器</p>
 <div class="winkVideoContainerClass"><video autoplay="autoplay" class="winkVideoClass" controls="controls" data-dirname="/cmsimde/static" data-varname="winkVideoData_w2_1" height="600" muted="true" width="800"><source src="/downloads/1.mp4" type="video/mp4"/></video>
@@ -118,7 +118,7 @@ run()
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/HdGbqVGJWnw" title="YouTube video player" width="560"></iframe></p>
 <p>遇到問題所有的物件必須使用實體</p>
 <p><img alt="" height="401" src="/images/圖片1.png" width="807"/></p>
-<h2>問題</h2>
+</div><h2>問題</h2>
 <p>使用chatgpt</p>
 <p><strong>1.<span class="ui-provider uv b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak" dir="ltr">coppeliasim中的scene與model有何不同?</span></strong></p>
 <p>Scene 代表整個模擬場景，包括模型、燈光、相機、物理引擎、碰撞檢測等元素，而且可以包含多個模型。在 CoppeliaSim 裡，你可以在 Scene 中建立不同的物體、場景、環境等元素，然後對它們進行編輯、設置、執行模擬等操作。</p>
@@ -151,17 +151,12 @@ run()
 <p>其中 sim_shape_cube 是立方體的 ID，16 是立方體的位姿關係參數，{0.5, 0.5, 0.5} 是立方體的大小，0.01 是立方體的質量。simSetObjectPosition 函數將物體放置在世界坐標系原點。</p>
 <p>使用 Python 創建 primitive type object：</p>
 <ol>
+<ol>
 <li>在 CoppeliaSim 中，點擊 File -&gt; New Scene，創建一個新的場景。</li>
 <li>在 Scene 中，點擊左側菜單的 Primitive Shapes 按鈕，選擇你想要的 primitive shape（如 Cube、Sphere、Cylinder 等）。</li>
 <li>在 Scene 中點擊滑鼠右鍵，選擇 Add -&gt; Primitive shape，你會發現一個新的 primitive object 被添加到場景中。</li>
 <li>在 Scene 中選擇這個 primitive object，點擊右側的 Property Editor 按鈕，你可以看到這個物體的所有屬性，例如位置、旋轉、大小等。</li>
-<li>在 Python script 中，使用 sim.simxCreatePureShape 函數創建 primitive object。例如，以下代碼創建一個 0.5 米大小的立方體並將其放置在世界坐標系原。
-<p></p>
-</li>
-</ol>
-</div>
-</div>
-</div>
+<li>在 Python script 中，使用 sim.simxCreatePureShape 函數創建 primitive object。例如，以下代碼創建一個 0.5 米大小的立方體並將其放置在世界坐標系原。<img alt="" height="371" src="/images/螢幕擷取畫面 2023-03-19 181928.png" width="963"/>
 <div class="flex justify-between">
 <p><strong>4.CoppeliaSim.ttt檔案格式與.simscene.xml檔案格式有何不同?</strong></p>
 <p>CoppeliaSim 的 .ttt 檔案格式和 .simscene.xml 檔案格式都是用來保存 CoppeliaSim 场景的文件格式，但是它們的文件結構和格式是不同的。</p>
@@ -171,6 +166,12 @@ run()
 <p></p>
 <p></p>
 </div>
+</li>
+</ol>
+</ol>
 </div>
 </div>
-</div></div>
+</div>
+</div>
+</div>
+</div>
