@@ -195,8 +195,11 @@ run()
 </div>
 </div><h2>程式講解</h2>
 <p></p>
-<p></p>
-<h1>專題規劃</h1>
+<p><span>這是 Coppelia Robotics 的 V-REP 軟件模擬環境中視覺傳感器的 Lua 腳本。</span></p>
+<p><span><span>該</span></span><code>sysCall_init</code><span><span>函數在模擬開始時調用一次，用於初始化腳本。</span></span></p>
+<p><span></span><code>sysCall_vision</code><span><span>每次觸發視覺傳感器更新其圖像時都會調用</span><span>該函數。</span><span>該函數首先使用 將當前圖像從視覺傳感器複製到工作圖像</span></span><code>simVision.sensorImgToWorkImg</code><span><span>。</span></span><code>simVision.edgeDetectionOnWorkImg</code><span><span>然後，使用0.2的閾值</span><span>對工作圖像進行邊緣檢測。</span><span>最後，使用 將修改後的工作圖像複製回視覺傳感器</span></span><code>simVision.workImgToSensorImg</code><span><span>。</span></span></p>
+<p><span><span>總體而言，此腳本對視覺傳感器圖像執行邊緣檢測，並使用處理後的圖像更新傳感器圖像。</span></span></p>
+<p><span><span></span></span></p><h1>專題規劃</h1>
 <div class="page-header">
 <p>規劃專案的12個步驟<br/>如果我們有好多好多的事情要做，誰不愛擁有一個清單？告訴自己該做什麼，並且詳細的條列出來，下次只要依循這些清單上面的步驟，我們就可以完成一個專案，又不用害怕遺漏甚麼東西，那該有多好呢？當然身為負責這個專案的你，以下步驟可以幫助你更輕鬆有效的規劃專案。</p>
 <p>1.定義範疇<br/>這是一個規劃專案的重要第一步，此專案要做甚麼、包含的範圍有多廣，必須在何時完成，你必須把這個大餅畫出來再做細分，才能夠掌握此專案的正確方向。</p>
@@ -227,5 +230,6 @@ run()
 <p></p>
 <p>12.專案結束仍要保持聯繫<br/>最後，你已經完成專案了，但是你不能確保此專案之後不會有任何問題，有些地方還是需要專家的幫忙，如果你的技術部門是外包的，那你就必須要隨時與你的外包商聯繫，如果哪一天突然發生突發狀況，你才不會找不到人來幫你處理，隨時關心團隊成員，也可以建立良好的人脈關係唷！</p>
 </div><h1>足球場</h1>
+<p><a href="/downloads/ag7 分組報告.pdf">/downloads/ag7 分組報告.pdf</a></p>
 <p><br/><br/><img alt="" height="293" src="/images/未命名.png" width="521"/></p>
 <p></p>
